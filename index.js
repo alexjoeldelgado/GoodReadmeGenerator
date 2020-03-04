@@ -83,7 +83,7 @@ ${data.tests}
 If you have any questions, please feel free to contact me below.
 `
   
-    fs.writeFile(`README.md`, readMe, function(err) {
+    fs.writeFile("./new-readme/README.md", readMe, function(err) {
   
       if (err) {return console.log(err)};
   
@@ -99,7 +99,7 @@ const githubProfile =
 <img src='${user.avatar_url}' alt='github avatar'>
 ${user.email}
 `
-    fs.appendFile(`README.md`, githubProfile, function(err) {
+    fs.appendFile(`./new-readme/README.md`, githubProfile, function(err) {
         if (err) {throw err};
 
         console.log(`Added Github Info`);
