@@ -45,10 +45,11 @@ inquirer
   
 const readMe = 
 `# ${data.title}
-${data.summary}
 <a href='https://github.com/${data.githubUsername}/${data.title}/pulls'>
 <img src='https://img.shields.io/badge/Pulls-Welcome-brightgreen' alt='badge'>
 </a>
+${data.summary}
+
     
 ## Description
 ${data.description}
@@ -95,9 +96,11 @@ axios.get(queryUrl).then(function(res) {
 const user = res.data;
 const githubProfile = 
 `
-<a href='${user.html_url}'>${user.login}</a>
-<img src='${user.avatar_url}' alt='github avatar'>
-${user.email}
+<a href='${user.html_url}'>Github Profile: ${user.login}</a>
+
+<img src='${user.avatar_url}' height='200px' alt='github avatar'>
+
+Email: ${user.email}
 `
     fs.appendFile(`./new-readme/README.md`, githubProfile, function(err) {
         if (err) {throw err};
