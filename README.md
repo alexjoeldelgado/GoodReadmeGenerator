@@ -21,6 +21,9 @@ The user will need to install the following node.js packages: inquirer and axios
 ## Usage
 The user is prompted on the command line for information about the project at hand. 
 
+## Visuals
+<img src='./GoodReadmeGenerator.gif' height='200px' alt='demo gif'>
+
 ## License
 <img src='https://img.shields.io/badge/License-MIT-black' alt='badge'>
     
