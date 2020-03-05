@@ -25,9 +25,14 @@ inquirer
         name: "usage",
         message: "How does the project function?"
     },{
-        type: "input",
+        type: "list",
         name: "license",
-        message: "Which licenses will you be attaching to the project?"
+        message: "Which license will you be attaching to the project?",
+        choices: [
+            "MIT",
+            "GPL",
+            "Apache"
+        ]
     },{
         type: "input",
         name: "contributing",
@@ -45,22 +50,18 @@ inquirer
   
 const readMe = 
 `# ${data.title}
-<a href='https://github.com/${data.githubUsername}/${data.title}/pulls'>
-<img src='https://img.shields.io/badge/Pulls-Welcome-brightgreen' alt='badge'>
-</a>
 ${data.summary}
 
-    
 ## Description
 ${data.description}
-    
+
 ### Table of Contents
 I. Title
 II. Description
 III. Table of Contents
 IV. Installation
 V. Usage
-VI. License(s)
+VI. License
 VII. Contributing
 VIII. Test(s)
 IX. Questions
@@ -71,8 +72,8 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-## License(s)
-${data.license}
+## License
+<img src='https://img.shields.io/badge/License-${data.license}-black' alt='badge'>
     
 ## Contributing
 ${data.contributing}
@@ -100,13 +101,23 @@ const githubProfile =
 
 <img src='${user.avatar_url}' height='200px' alt='github avatar'>
 
-Email: ${user.email}
 `
-    fs.appendFile(`./new-readme/README.md`, githubProfile, function(err) {
+fs.appendFile(`./new-readme/README.md`, githubProfile, function(err) {
         if (err) {throw err};
 
         console.log(`Added Github Info`);
     });
+if (user.email !== null){
+  fs.appendFile(`./new-readme/README.md`, `Email: ${user.email}`, function(err) {
+    if (err) {throw err};
+
+    console.log(`Added Github Email`);
+})} else {
+    fs.appendFile(`./new-readme/README.md`, `Email: Not Provided`, function(err) {
+        if (err) {throw err};
+    });
+    console.log("No email provided.")
+};
 });
 });
 

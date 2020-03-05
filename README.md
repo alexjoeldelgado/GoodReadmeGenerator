@@ -33,7 +33,7 @@ No Pertinent Tests
 ## Questions
 If you have any questions, please feel free to contact me below.
 
-<a href='https://github.com/alexjoeldelgado'>Github Username: alexjoeldelgado</a>
+<a href='https://github.com/alexjoeldelgado' target='_blank'>Github Username: alexjoeldelgado</a>
 
 <img src='https://avatars2.githubusercontent.com/u/55860772?v=4' height='200px' alt='github avatar'>
 

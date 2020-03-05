@@ -1,16 +1,15 @@
 {
-  "name": "static-site",
+  "name": "good-readme-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alexander Delgado",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
-    "dotenv": "^8.0.0",
     "inquirer": "^6.5.2"
   }
 }
